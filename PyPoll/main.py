@@ -6,6 +6,7 @@ from collections import Counter
 
 # Sets path to csv file
 pathtofile = os.path.join('Resources', 'election_data.csv')
+pathToOpen = os.path.join('analysis', 'Elections_Results.txt')
 
 # opens election data and stores it in 'csvfile'
 with open(pathtofile) as csvfile:
@@ -52,7 +53,7 @@ print(f'Winner: {winner}')
 
 
 # write results to text file
-with open ('Election Results.txt', 'w') as f:
+with open (pathToOpen, 'w') as f:
     f.write('Election Results\n')
     f.write('----------------------------\n')
     f.write(f"Total Votes: {totalVotes}\n")
@@ -66,7 +67,7 @@ with open ('Election Results.txt', 'w') as f:
                 
         
         
-# print(candidateCol.count('Charles Casper Stockham'))
+
 
 
 

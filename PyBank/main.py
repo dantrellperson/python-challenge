@@ -4,6 +4,7 @@ import csv
 
 # Sets path to csv file
 pathtofile = os.path.join('Resources', 'budget_data.csv')
+pathToOutput = os.path.join('Analysis', 'Financial_Analysis.txt')
 
 # opens budget data and stores it in 'csvfile'
 with open(pathtofile) as csvfile:
@@ -77,7 +78,7 @@ print(f'Greatest Increase in Profits: {maxIncreaseMonth} $ {int(changeByMonth[ma
 print(f'Greatest Decrease in Profits: {minIncreaseMonth} $ {int(changeByMonth[minIncreaseValue])}')
 
 # Write text file 
-with open ('FinancialAnalysis.txt', 'w') as f:
+with open (pathToOutput, 'w') as f:
     f.write('Financial Analysis\n')
     f.write('----------------------------\n')
     f.write(f"Total Months: {totalMonths}\n")
